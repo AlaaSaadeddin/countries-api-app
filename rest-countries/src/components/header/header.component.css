@@ -1,0 +1,10 @@
+.header {
+    border: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.dark-mode-btn {
+    background: transparent;
+    border: none;
+}
