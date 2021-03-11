@@ -7,6 +7,7 @@ import { HeaderComponent } from '../components/header/header.component';
 import { SearchCountryComponent } from '../components/search-country/search-country.component';
 import { CardListComponent } from '../components/card-list/card-list.component';
 import { CardDetailsComponent } from '../components/card-details/card-details.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardDetailsComponent } from '../components/card-details/card-details.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
