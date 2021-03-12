@@ -1,0 +1,35 @@
+.back-btn{
+    width: 80px;
+    padding: 10px;
+    background: transparent;
+    border: solid silver 1px;
+    box-shadow: 1px silver;
+
+}
+
+.details-container {
+    /* border: solid black 1px; */
+    display: flex;
+
+}
+
+.img-container {
+    border: solid black 1px;
+    width: 40%;
+
+}
+
+.flag-img{
+    width: 100px;
+}
+
+.text-container {
+    display: inline-flex;
+    justify-content: space-between
+
+}
+
+.btn-container {
+    align-items: flex-end;
+
+}
