@@ -16,15 +16,16 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.countryService.getCountry()
+    this.countryService.getAllCountries()
     .subscribe(country => {
       this.countryList = country;
     })
 
+    this.countryService.getCountry()
+    .subscribe(country => {
+      console.log('country :>> ', country);
+      this.countryList = country;
+    })
+
   }
-
-
-
-
-
 }
