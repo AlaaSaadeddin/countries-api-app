@@ -5,36 +5,12 @@ import {PageNotFoundComponent} from '../components/page-not-found/page-not-found
 
 export let routes = [
   
-  { path:'country', component: CardListComponent},
+  { path:'', component: CardListComponent},
 
-      { path:'name/:name', component: CardDetailsComponent},
+  { path:'name/:name', component: CardDetailsComponent},
 
-    { path:'**', component: PageNotFoundComponent}
+  { path:'**', component: PageNotFoundComponent}
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // { path:'', redirectTo: 'name/:name', pathMatch: 'full'},
 
    
