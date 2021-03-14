@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {Country} from '../components/country';
-import {CountryService} from '../components/country.service'
 
 
 @Component({
@@ -12,20 +10,10 @@ export class AppComponent {
   title = 'rest-countries';
   countryList:any = [];
 
-  constructor(private countryService: CountryService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.countryService.getAllCountries()
-    .subscribe(country => {
-      this.countryList = country;
-    })
-
-    this.countryService.getCountry()
-    .subscribe(country => {
-      console.log('country :>> ', country);
-      this.countryList = country;
-    })
-
+    
   }
 }

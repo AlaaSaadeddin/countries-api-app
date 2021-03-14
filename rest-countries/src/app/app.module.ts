@@ -8,6 +8,9 @@ import { SearchCountryComponent } from '../components/search-country/search-coun
 import { CardListComponent } from '../components/card-list/card-list.component';
 import { CardDetailsComponent } from '../components/card-details/card-details.component';
 import {HttpClientModule} from '@angular/common/http'
+import {RouterModule} from '@angular/router'
+import { from } from 'rxjs';
+import {routes} from './routes'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import {HttpClientModule} from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

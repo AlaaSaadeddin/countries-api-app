@@ -1,10 +1,17 @@
 <div class="card-container" >
     <div class="card-list" *ngFor="let country of countryList">
-        <a href="/datails" ></a>
-      <img src="{{country.flag}}" >
-      <h3>{{country.name}}</h3>
-      <p>population: {{country.population}}</p>
-      <p>region: {{country.region}}</p>
-      <p>capital: {{country.capital}}</p>
-    </div>
-  </div>
+          <div (click) = 'selected()' >
+            <img src="{{country.flag}}" >
+            <h3>{{country.name}}</h3>
+            <p>population: {{country.population}}</p>
+            <p>region: {{country.region}}</p>
+            <p>capital: {{country.capital}}</p>
+          </div>
+     </div>
+</div>
+
+
+<!--  -->
+<!-- "['/name' , country.name]" -->
+
+<!-- routerLink= '/name' , [queryParams]= "{name : 'country.name'}" -->
