@@ -10,7 +10,8 @@ import { CardDetailsComponent } from '../components/card-details/card-details.co
 import {HttpClientModule} from '@angular/common/http'
 import {RouterModule} from '@angular/router'
 import { from } from 'rxjs';
-import {routes} from './routes'
+import {routes} from './routes';
+import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {routes} from './routes'
     HeaderComponent,
     SearchCountryComponent,
     CardListComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

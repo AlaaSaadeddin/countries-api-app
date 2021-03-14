@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import {CountryService} from '../country.service'
 import {ActivatedRoute} from '@angular/router'
 import {Router} from '@angular/router'
+// import {Cou} from '../country'
 
 
 @Component({
@@ -10,8 +11,8 @@ import {Router} from '@angular/router'
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit {
-  @Input() countryList:any;
-  clicked = false;
+  countryList:any = []; 
+  clicked = false
 
 
   constructor(private countryService: CountryService,
@@ -28,10 +29,8 @@ export class CardListComponent implements OnInit {
 
   selected() {
     if(this.clicked){
-      this.router.navigate(['/name'], {queryParams:{name:'name'}})
-    } else {
-      this.router.navigate(['/'])
-    }
+      this.router.navigate(['/name'])
+    } 
 
   }
 
