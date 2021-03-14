@@ -8,6 +8,10 @@ import { SearchCountryComponent } from '../components/search-country/search-coun
 import { CardListComponent } from '../components/card-list/card-list.component';
 import { CardDetailsComponent } from '../components/card-details/card-details.component';
 import {HttpClientModule} from '@angular/common/http'
+import {RouterModule} from '@angular/router'
+import { from } from 'rxjs';
+import {routes} from './routes';
+import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
@@ -15,12 +19,14 @@ import {HttpClientModule} from '@angular/common/http'
     HeaderComponent,
     SearchCountryComponent,
     CardListComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

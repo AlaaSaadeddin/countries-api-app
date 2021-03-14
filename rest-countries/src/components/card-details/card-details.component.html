@@ -2,16 +2,18 @@
     <button class="back-btn">
         <i class="fas fa-arrow-left" style="margin-right: 5px;" ></i>
         Back</button>
-    <div class="details-container" >
+
+    <div class="details-container" *ngFor="let country of countryList"  >
+
         <div class="img-container" >
             <img class="flag-img" src="https://restcountries.eu/data/afg.svg">
         </div>
 
-        <h2>Palestine</h2>
+        <h2>{{country.name}}</h2>
 
         <div class="text-container">
             <div>
-                <p>name: gaza</p>
+                <!-- <p>Native name: {{country.languages[3].nativeName}}</p> -->
                 <p>name: gaza</p>
                 <p>name: gaza</p>
                 <p>name: gaza</p>
@@ -32,4 +34,6 @@
 
         </div>
     </div>
+<!-- </a>     -->
+
 </div>
