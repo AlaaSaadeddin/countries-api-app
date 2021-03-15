@@ -15,7 +15,7 @@ export class CountryService {
         return this.http.get('https://restcountries.eu/rest/v2/all')
     }
 
-    getCountry(name: string) {
+    getCountry(name: string | null) {
         return this.http.get(`https://restcountries.eu/rest/v2/name/${name}`)
     }
 
