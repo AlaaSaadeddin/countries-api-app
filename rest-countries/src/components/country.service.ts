@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Country } from './country';
 
 @Injectable({
     providedIn: 'root'
@@ -11,12 +13,12 @@ export class CountryService {
 
     }
 
-    getAllCountries() {
-        return this.http.get('https://restcountries.eu/rest/v2/all')
+    getAllCountries():Observable<Country[]> {
+        return this.http.get<Country[]>('https://restcountries.eu/rest/v2/all')
     }
 
-    getCountry(name: string | null) {
-        return this.http.get(`https://restcountries.eu/rest/v2/name/${name}`)
+    getCountry(name: string): Observable<Country[]> {
+        return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/name/${name}`)
     }
 
 }

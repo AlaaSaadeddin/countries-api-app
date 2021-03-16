@@ -9,6 +9,7 @@ import { CardListComponent } from '../components/card-list/card-list.component';
 import { CardDetailsComponent } from '../components/card-details/card-details.component';
 import {HttpClientModule} from '@angular/common/http'
 import {RouterModule} from '@angular/router'
+import {FormsModule} from '@angular/forms'
 import { from } from 'rxjs';
 import {routes} from './routes';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component'
@@ -24,6 +25,7 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(routes)

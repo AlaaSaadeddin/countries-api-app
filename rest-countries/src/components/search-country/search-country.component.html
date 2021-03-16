@@ -1,7 +1,9 @@
 <div style="width: 80%; margin: auto; border: 1px black solid;">
-    <i class="fas fa-search" style="color: lightgray; margin-left: 10px;"></i>
-    <input type="text" placeholder="Search for a country ..." class="search-input">
-
+    <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)" >
+        <i class="fas fa-search" style="color: lightgray; margin-left: 10px;"></i>
+        <input type="text" name="name" placeholder="Search for a country ..."
+         class="search-input" (ngModel)="search" >
+    </form>
     <select name="regions" class="category">
         <option selected >Filter by region</option>
         <option>Africa</option>
@@ -11,4 +13,6 @@
         <option>Oceania</option>
 
     </select>
+
+    
 </div>
