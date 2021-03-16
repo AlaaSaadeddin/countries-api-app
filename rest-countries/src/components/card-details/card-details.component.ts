@@ -25,10 +25,11 @@ export class CardDetailsComponent implements OnInit {
    
     this.route.paramMap
     .subscribe(params => {
-      console.log(typeof(params));
-      console.log('params :>> ', params);
-      console.log('name :>> ', name);
-      this.countryService.getCountry('name')
+      // console.log(typeof(params));
+      // console.log('params :>> ', typeof());
+      // console.log('name :>> ', name);
+      // const name = params.get('name');
+      this.countryService.getCountry(params.get('name'))
       .subscribe(countryName => {
       this.countryList = countryName;
       })

@@ -1,22 +1,13 @@
-
-<div class="card-container" >
-    <div class="card-list" *ngFor="let country of countryList">
-      <!-- <a [routerLink] = "['/name', country.name]"‏> -->
-
-          <div (click) = 'selected()' >
-            <img src="{{country.flag}}" >
-            <h3>{{country.name}}</h3>
-            <p>population: {{country.population}}</p>
-            <p>region: {{country.region}}</p>
-            <p>capital: {{country.capital}}</p>
-          </div>
-        <!-- </a> -->
-
-     </div>
+<div class="card-container">
+  <div class="card-list" *ngFor="let country of countryList">
+    <a [routerLink]="['name', country.name]" class="country-link" >
+      <div>
+        <img src="{{ country.flag }}" />
+        <h3>{{ country.name }}</h3>
+        <p>population: {{ country.population }}</p>
+        <p>region: {{ country.region }}</p>
+        <p>capital: {{ country.capital }}</p>
+      </div>
+    </a>
+  </div>
 </div>
-
-
-<!--  -->
-<!-- "['/name' , country.name]" -->
-
-<!--  -->
