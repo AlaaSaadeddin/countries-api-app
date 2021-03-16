@@ -4,7 +4,7 @@
         <input type="text" name="name" placeholder="Search for a country ..."
          class="search-input" (ngModel)="search" >
     </form>
-    <select name="regions" class="category">
+    <select [(ngModel)]="sortby" (onchange)="onFilterChanged()" name="sortby" class="category">
         <option selected >Filter by region</option>
         <option>Africa</option>
         <option>America</option>

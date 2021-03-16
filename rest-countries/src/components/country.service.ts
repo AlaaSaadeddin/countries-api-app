@@ -21,4 +21,8 @@ export class CountryService {
         return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/name/${name}`)
     }
 
+    getRegion(region: string):Observable<Country[]> {
+        return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/region/${region}`)
+    }
+
 }
