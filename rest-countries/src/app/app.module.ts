@@ -11,7 +11,8 @@ import {HttpClientModule} from '@angular/common/http'
 import {RouterModule} from '@angular/router'
 import { from } from 'rxjs';
 import {routes} from './routes';
-import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component'
+import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
+import { CardButtonComponent } from '../components/card-button/card-button.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
     SearchCountryComponent,
     CardListComponent,
     CardDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardButtonComponent
   ],
   imports: [
     BrowserModule,

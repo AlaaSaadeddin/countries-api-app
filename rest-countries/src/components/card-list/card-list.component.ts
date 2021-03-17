@@ -27,11 +27,4 @@ export class CardListComponent implements OnInit {
 
   }
 
-  selected() {
-    if(this.clicked){
-      this.router.navigate(['/name'])
-    } 
-
-  }
-
 }

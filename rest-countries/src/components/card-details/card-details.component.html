@@ -1,42 +1,50 @@
 <div>
-  <button class="back-btn">
-    <i class="fas fa-arrow-left" style="margin-right: 5px"></i>
-    Back
-  </button>
+  <div>
+    <a class="back-btn" [routerLink]="['../../']" >
+     
+        <i class="fas fa-arrow-left" style="margin-right: 5px"></i>
+        Back
+      
+    </a>
+  </div>
 
-  <div class="details-container" *ngFor="let country of countryList">
+  <div class="details-container">
     <div class="img-container">
-      <img class="flag-img" src="{{ country.flag }}" />
+      <img class="flag-img" src="{{ countryList[0].flag }}" />
     </div>
 
-    <h2>{{ country.name }}</h2>
+    <h2>{{ countryList[0].name }}</h2>
 
     <div class="text-container">
       <div>
-        <p>Native name: {{ country.nativeName }}</p>
-        <p>Population: {{ country.population }}</p>
-        <p>Region: {{ country.region }}</p>
-        <p>Sub Region: {{ country.subregion }}</p>
-        <p>Capital: {{ country.capital }}</p>
+        <p>Native name: {{ countryList[0].nativeName }}</p>
+        <p>Population: {{ countryList[0].population }}</p>
+        <p>Region: {{ countryList[0].region }}</p>
+        <p>Sub Region: {{ countryList[0].subregion }}</p>
+        <p>Capital: {{ countryList[0].capital }}</p>
       </div>
 
       <div>
-        <p>Top Level Domain: {{ country.topLevelDomain }}</p>
+        <p>Top Level Domain: {{ countryList[0].topLevelDomain }}</p>
 
-        <p>Currencies: {{ country.currencies[0].name }}</p>
+        <p>Currencies: {{ countryList[0].currencies[0].name }}</p>
 
-        <p>Languages: {{ country.languages[0].name }}</p>
+        <div>
+          languages: <span *ngFor = "let language of countryList[0].languages">{{language.name}} </span>
+        </div>
       </div>
-      
     </div>
 
     <div>
       <p>Countries Borders</p>
-      <a>{{country.borders}}</a>       
+      <app-card-button [countryBorders]="countryList[0].borders"></app-card-button>
     </div>
-
-    
-
   </div>
-  
 </div>
+
+
+
+
+
+
+//
