@@ -25,4 +25,9 @@ export class CountryService {
         return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/region/${region}`)
     }
 
+    getCountryNamesFromCodes(arr:string[]){
+        const border = arr.join(';');
+        return this.http.get(`https://restcountries.eu/rest/v2/alpha?codes=${border}`)
+    }
+
 }

@@ -1,39 +1,50 @@
 <div>
-    <button class="back-btn">
-        <i class="fas fa-arrow-left" style="margin-right: 5px;" ></i>
-        Back</button>
+  <div>
+    <a class="back-btn" [routerLink]="['../../']" >
+     
+        <i class="fas fa-arrow-left" style="margin-right: 5px"></i>
+        Back
+      
+    </a>
+  </div>
 
-    <div class="details-container" *ngFor="let country of countryList"  >
-
-        <div class="img-container" >
-            <img class="flag-img" src="https://restcountries.eu/data/afg.svg">
-        </div>
-
-        <h2>{{country.name}}</h2>
-
-        <div class="text-container">
-            <div>
-                <p>Native name: {{country.languages[3].nativeName}}</p>
-                <p>name: gaza</p>
-                <p>name: gaza</p>
-                <p>name: gaza</p>
-                <p>name: gaza</p>
-            </div>
-
-            <div>
-                <p>name: gaza</p>
-                <p>name: gaza</p>
-                <p>name: gaza</p>
-            </div>            
-        </div>
-        <div class="btn-container" >
-            <button>Cairo</button>
-            <button>Cairo</button>
-            <button>Cairo</button>
-            <button>Cairo</button>
-
-        </div>
+  <div class="details-container">
+    <div class="img-container">
+      <img class="flag-img" src="{{ countryList[0].flag }}" />
     </div>
-<!-- </a>     -->
 
+    <h2>{{ countryList[0].name }}</h2>
+
+    <div class="text-container">
+      <div>
+        <p>Native name: {{ countryList[0].nativeName }}</p>
+        <p>Population: {{ countryList[0].population }}</p>
+        <p>Region: {{ countryList[0].region }}</p>
+        <p>Sub Region: {{ countryList[0].subregion }}</p>
+        <p>Capital: {{ countryList[0].capital }}</p>
+      </div>
+
+      <div>
+        <p>Top Level Domain: {{ countryList[0].topLevelDomain }}</p>
+
+        <p>Currencies: {{ countryList[0].currencies[0].name }}</p>
+
+        <div>
+          languages: <span *ngFor = "let language of countryList[0].languages">{{language.name}} </span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>Countries Borders</p>
+      <app-card-button [countryBorders]="countryList[0].borders"></app-card-button>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+//

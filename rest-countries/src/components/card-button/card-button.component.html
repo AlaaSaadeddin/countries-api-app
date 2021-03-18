@@ -1,0 +1,6 @@
+<div *ngFor="let countryBorder of countriesNames">
+    <a [routerLink]="['../../name', countryBorder.name]">
+      {{countryBorder.name}}
+    </a>
+  </div>
+  

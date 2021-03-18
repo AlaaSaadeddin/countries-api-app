@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CountryService } from '../country.service';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
+import {CountryService} from '../country.service'
+import {ActivatedRoute} from '@angular/router'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-card-details',
