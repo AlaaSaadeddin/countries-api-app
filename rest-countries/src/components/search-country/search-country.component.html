@@ -4,14 +4,9 @@
         <input type="text" name="name" placeholder="Search for a country ..."
          class="search-input" (ngModel)="search" >
     </form>
-    <select [(ngModel)]="sortby" (onchange)="onFilterChanged()" name="sortby" class="category">
-        <option selected >Filter by region</option>
-        <option>Africa</option>
-        <option>America</option>
-        <option>Asia</option>
-        <option>Europe</option>
-        <option>Oceania</option>
-
+    <select [(ngModel)]="filterby" (change)="onFilterChanged($event)" name="filterby" class="category">
+        <option selected >All</option>
+        <option *ngFor="let region of regions" [value]="region.name" >{{region.name}}</option>
     </select>
 
     

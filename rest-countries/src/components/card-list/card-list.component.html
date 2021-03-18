@@ -1,6 +1,6 @@
 <div class="card-container">
   <!-- style="width: 80%; margin: auto; border: 1px black solid;"> -->
-  <app-search-country (onSearch)="reset($event)" ></app-search-country>
+  <app-search-country (onSearch)="reset($event)" (onFilter)="reset($event)"></app-search-country>
 
   <div class="card-list" *ngFor="let country of countryList">
     <a [routerLink]="['name', country.name]" class="country-link">
