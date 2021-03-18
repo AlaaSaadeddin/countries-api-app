@@ -2,8 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import {CountryService} from '../country.service'
 import {ActivatedRoute} from '@angular/router'
 import {Router} from '@angular/router'
-// import {Cou} from '../country'
-
+import { Country } from '../country';
 
 @Component({
   selector: 'app-card-list',
@@ -12,8 +11,6 @@ import {Router} from '@angular/router'
 })
 export class CardListComponent implements OnInit {
   countryList:any = []; 
-  clicked = false
-
 
   constructor(private countryService: CountryService,
     private route: ActivatedRoute , private router: Router) { }
@@ -24,7 +21,11 @@ export class CardListComponent implements OnInit {
       this.countryList = country;
     })
 
+  }
+
+  reset(result: Country[]) {
+    this.countryList = result
+  }
 
   }
 
-}
