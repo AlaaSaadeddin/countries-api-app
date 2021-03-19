@@ -1,5 +1,4 @@
-<div>
-  <app-header></app-header>
+<div [className]="darkMode ? 'dark':'light'">
+  <app-header (enableDarkMode)='changeTheme()'></app-header>
   <router-outlet></router-outlet>
 </div>
-

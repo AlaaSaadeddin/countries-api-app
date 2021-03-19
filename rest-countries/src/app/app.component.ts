@@ -8,12 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rest-countries';
- 
+  darkMode:boolean = false
 
   constructor() {
   }
 
   ngOnInit() {
     
+  }
+
+  changeTheme(){
+    console.log('hassan')
+    this.darkMode = !this.darkMode
   }
 }

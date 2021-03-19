@@ -1,17 +1,21 @@
 .search-input {
     width: 30%;
-    border: solid whitesmoke 1px;
+    border: solid var(--header-background-color) 1px;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px whitesmoke;
+    box-shadow: 1px 1px 1px 1px var(--header-background-color);
+    background-color: var(--header-background-color);
+    color: var(--text-color);
 }
 
 .category {
-    background-color: white;
+    background-color: var(--header-background-color);
     width: 15%;
-    border: solid whitesmoke 1px;
+    border: solid var(--header-background-color) 1px;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px whitesmoke;
+    box-shadow: 1px 1px 1px 1px var(--header-background-color);
     margin-left: 300px;
+    background-color: var(--header-background-color);
+    color: var(--text-color);
 }

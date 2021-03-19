@@ -4,3 +4,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.dark{
+  --header-background-color:#2b3743;
+  --text-color: white;
+  background-color: #212e37;
+}
+
+.light{
+  --header-background-color:white;
+  --text-color: black;
+  background-color: white;
+}

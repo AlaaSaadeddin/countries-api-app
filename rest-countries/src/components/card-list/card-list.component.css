@@ -5,12 +5,13 @@
 }
 
 .card-list {
-    border: solid whitesmoke 1px;
+    border: solid var(--header-background-color) 1px;
     margin: 30px;
     width: 15%;
     height: 45vh;
-    box-shadow: 1px 1px 1px 1px whitesmoke;
+    box-shadow: 1px 1px 1px 1px var(--header-background-color);
     border-radius: 8px;
+    background-color: var(--header-background-color);
 }
 
 .card-list img {
@@ -32,3 +33,4 @@
     color: black;
 
 }
+   
