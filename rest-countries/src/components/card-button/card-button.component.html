@@ -1,5 +1,5 @@
 <div *ngFor="let countryBorder of countriesNames">
-    <a [routerLink]="['../../name', countryBorder.name]">
+    <a [routerLink]="['../../name', countryBorder.name]" class="border-link" >
       {{countryBorder.name}}
     </a>
   </div>
