@@ -1,17 +1,45 @@
 .header {
+    width: 100%;
     background-color: var(--header-background-color);
     display: flex;
     justify-content: space-between;
     margin: auto;
     height:3rem ;
+    box-shadow: 1px #fafafa solid ;
+    /* border: solid black 1px; */
 }
 .dark-mode-btn {
     background: transparent;
     color: var(--text-color);
     cursor: pointer;
+    border: none;
+    margin-right: 50px;
 
 }
 
 .header-title{
    color: var(--text-color);
+   margin-left: 50px;
+}
+
+@media (max-width:600px) {
+    
+    .header-title{ 
+        font-size: 25px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .header-title{ 
+        font-size: 22px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    .dark-mode-btn {
+        margin-right: 20px;
+    }
+
 }

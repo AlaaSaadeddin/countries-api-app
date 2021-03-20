@@ -8,11 +8,13 @@
 .dark{
   --header-background-color:#2b3743;
   --text-color: white;
+  --shadow-color:#2b3743;
   background-color: #212e37;
 }
 
 .light{
   --header-background-color:white;
   --text-color: black;
-  background-color: white;
+  --shadow-color: lightgray;
+  background-color: #fafafa;
 }

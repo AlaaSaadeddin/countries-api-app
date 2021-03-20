@@ -1,16 +1,20 @@
-<div class="card-container">
+<div class="home-container">
   <!-- style="width: 80%; margin: auto; border: 1px black solid;"> -->
-  <app-search-country (onSearch)="reset($event)" (onFilter)="reset($event)"></app-search-country>
-
-  <div class="card-list" *ngFor="let country of countryList">
-    <a [routerLink]="['name', country.name]" class="country-link">
-      <div>
-        <img src="{{ country.flag }}" />
-        <h3>{{ country.name }}</h3>
-        <p>population: {{ country.population }}</p>
-        <p>region: {{ country.region }}</p>
-        <p>capital: {{ country.capital }}</p>
-      </div>
-    </a>
+  <app-search-country
+    (onSearch)="reset($event)"
+    (onFilter)="reset($event)"
+  ></app-search-country>
+  <div class="card-container" >
+    <div class="card-list" *ngFor="let country of countryList">
+      <a [routerLink]="['name', country.name]" class="country-link">
+        <div>
+          <img src="{{ country.flag }}"/>
+          <h3>{{ country.name }}</h3>
+          <p>population: {{ country.population }}</p>
+          <p>region: {{ country.region }}</p>
+          <p>capital: {{ country.capital }}</p>
+        </div>
+      </a>
+    </div>
   </div>
 </div>

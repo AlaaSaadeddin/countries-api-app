@@ -1,11 +1,11 @@
-<div style="width: 80%; margin: auto; border: 1px black solid;">
-    <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)" >
+<div class="search-container">
+    <form #searchForm="ngForm" (ngSubmit)="search(searchForm.value)" class="form" >
         <i class="fas fa-search" style="color: lightgray; margin-left: 10px;"></i>
         <input type="text" name="name" placeholder="Search for a country ..."
          class="search-input" (ngModel)="search" >
     </form>
     <select [(ngModel)]="filterby" (change)="onFilterChanged($event)" name="filterby" class="category">
-        <option selected >All</option>
+        <option selected >Filter by Region</option>
         <option *ngFor="let region of regions" [value]="region.name" >{{region.name}}</option>
     </select>
 
