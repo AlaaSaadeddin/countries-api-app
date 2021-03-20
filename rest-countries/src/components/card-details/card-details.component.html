@@ -1,10 +1,8 @@
-<div>
-  <div>
-    <a class="back-btn" [routerLink]="['../../']" >
-     
-        <i class="fas fa-arrow-left" style="margin-right: 5px"></i>
-        Back
-      
+<div class="county-detail-container">
+  <div class="back-btn-div">
+    <a class="back-btn" [routerLink]="['../../']">
+      <i class="fas fa-arrow-left" style="margin-right: 5px"></i>
+      Back
     </a>
   </div>
 
@@ -12,32 +10,28 @@
     <div class="img-container">
       <img class="flag-img" src="{{ countryList[0].flag }}" />
     </div>
-
-    <h2 class="country-name" >{{ countryList[0].name }}</h2>
-
-    <div class="text-container">
-      <div>
-        <p>Native name: {{ countryList[0].nativeName }}</p>
-        <p>Population: {{ countryList[0].population }}</p>
-        <p>Region: {{ countryList[0].region }}</p>
-        <p>Sub Region: {{ countryList[0].subregion }}</p>
-        <p>Capital: {{ countryList[0].capital }}</p>
+    <div class="details-container-name-other">
+      <div class='country-name-div'>
+        <h2 class="country-name">{{ countryList[0].name }}</h2>
       </div>
-
-      <div>
-        <p>Top Level Domain: {{ countryList[0].topLevelDomain }}</p>
-
-        <p>Currencies: {{ countryList[0].currencies[0].name }}</p>
-
+      <div class="text-container">
+        <p class="text-country-one"><span class='bold-text'>Native name: </span>{{ countryList[0].nativeName }}</p>
+        <p class="text-country-one"><span class='bold-text'>Population: </span>{{ countryList[0].population }}</p>
+        <p class="text-country-one"><span class='bold-text'> Region: </span>{{ countryList[0].region }}</p>
+        <p class="text-country-one"><span class='bold-text'>Sub Region: </span>{{ countryList[0].subregion }}</p>
+        <p class="text-country-one"><span class='bold-text'>Capital: </span>{{ countryList[0].capital }}</p>
+        <p class="text-country-one"><span class='bold-text'>Top Level Domain: </span>{{ countryList[0].topLevelDomain }}
+        </p>
+        <p class="text-country-one"><span class='bold-text'>Currencies: </span>{{ countryList[0].currencies[0].name }}
+        </p>
         <div>
-          languages: <span *ngFor = "let language of countryList[0].languages">{{language.name}} </span>
+          <span class='bold-text'>languages: </span><span
+            *ngFor="let language of countryList[0].languages">{{language.name}} </span>
         </div>
       </div>
-    </div>
 
-    <div class="text-container">
-      <p>Countries Borders</p>
-      <app-card-button [countryBorders]="countryList[0].borders"></app-card-button>
+      <p class='bold-text'>Countries Borders</p>
+      <app-card-button class="button-container-div" [countryBorders]="countryList[0].borders"></app-card-button>
     </div>
   </div>
 </div>

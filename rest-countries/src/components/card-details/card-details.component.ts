@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {CountryService} from '../country.service'
 import {ActivatedRoute} from '@angular/router'
 import {Router} from '@angular/router'
@@ -24,10 +24,8 @@ export class CardDetailsComponent implements OnInit {
         this.countryService
         .getCountry(name)
         .subscribe((countryName) => {
-          console.log('countryName :>> ', countryName);
           this.countryList = countryName;
         });
-
       }
      
     });
