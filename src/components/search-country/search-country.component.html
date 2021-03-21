@@ -5,7 +5,7 @@
          class="search-input" (ngModel)="search" >
     </form>
     <select [(ngModel)]="filterby" (change)="onFilterChanged($event)" name="filterby" class="category">
-        <option selected >Filter by Region</option>
+        <option selected disabled>Filter by Region</option>
         <option *ngFor="let region of regions" [value]="region.name" >{{region.name}}</option>
     </select>
 

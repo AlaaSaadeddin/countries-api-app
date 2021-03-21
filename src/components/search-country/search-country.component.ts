@@ -14,9 +14,9 @@ interface IRegion{
 })
 
 export class SearchCountryComponent {
-   regions:IRegion[] = [{name:'Asia'},{name:'Africa'},
+   regions:IRegion[] = [{name:'All'},{name:'Asia'},{name:'Africa'},
    {name:'Americas'},{name:'Europe'},{name:'Oceania'}]
-   filterby:string = '' ;
+   filterby:string = 'All' ;
   AllCountries:Country[] = [];
   regionCountries: any = [];
 
@@ -41,7 +41,7 @@ export class SearchCountryComponent {
   }
 
   onFilterChanged(event:any){
-    if(!this.filterby){
+    if(!this.filterby || this.filterby=='All'){
       this.countryService.getAllCountries().subscribe(
         countries => {
           this.onFilter.emit(countries);
