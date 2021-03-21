@@ -2,7 +2,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CountryService } from '../country.service';
 import { Country } from '../country';
 
-
 interface IRegion{
   name:string
 }
@@ -14,10 +13,11 @@ interface IRegion{
 })
 
 export class SearchCountryComponent {
-   regions:IRegion[] = [{name:'All'},{name:'Asia'},{name:'Africa'},
-   {name:'Americas'},{name:'Europe'},{name:'Oceania'}]
-   filterby:string = 'All' ;
-  AllCountries:Country[] = [];
+  regions:IRegion[] = [{name:'All'},{name:'Asia'},{name:'Africa'},
+                       {name:'Americas'},{name:'Europe'},{name:'Oceania'}]
+  filterby:string = 'All' ;
+  searchValue:string = '';
+  allCountries:Country[] = [];
   regionCountries: any = [];
 
   @Output() onSearch: EventEmitter<Country[]> = new EventEmitter();
@@ -25,44 +25,23 @@ export class SearchCountryComponent {
 
   constructor(private countryService: CountryService) {}
 
-  search(form: { name: string }) {
-    console.log(name);
-    if (form.name) {
+  search() {
+       if (this.searchValue) {
       this.countryService
-        .getCountry(form.name)
+        .getCountry(this.searchValue)
         .subscribe((countries: Country[]) => {
-          this.onSearch.emit(countries);
-        });
-    } else {
+           this.onSearch.emit( countries.filter((country:any)=> {
+            return this.filterby === 'All' ? country : country.region === this.filterby
+        }))
+    })} 
+    else {
       this.countryService.getAllCountries().subscribe((countries) => {
-        this.onSearch.emit(countries);
+        this.onSearch.emit(countries.filter((country:any)=> {
+          return this.filterby === 'All' ? country : country.region === this.filterby
+        }));
       });
     }
+  
   }
+}
 
-  onFilterChanged(event:any){
-    if(!this.filterby || this.filterby=='All'){
-      this.countryService.getAllCountries().subscribe(
-        countries => {
-          this.onFilter.emit(countries);
-        }
-      )
-    } else{
-      this.countryService.getRegionCountries(event.target.value).subscribe(
-        countries => {
-          this.onFilter.emit(countries);
-
-        }
-      )
-    
-      
-    }{
-
-    }
-
-  }
-
-  // onFilterChanged(){
-  //   console.log('hello');
-  // }
- }
