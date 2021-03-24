@@ -4,10 +4,10 @@
     (onSearch)="reset($event)"
     (onFilter)="reset($event)"
   ></app-search-country>
-  <div class="card-container" >
+  <div class="card-container">
     <div class="card-list" *ngFor="let country of countryList">
       <a [routerLink]="['name', country.name]" class="country-link">
-        <div>
+        <div *ngIf="countryList.length">
           <img src="{{ country.flag }}"/>
           <h3>{{ country.name }}</h3>
           <p>population: {{ country.population }}</p>
@@ -15,6 +15,9 @@
           <p>capital: {{ country.capital }}</p>
         </div>
       </a>
+    </div>
+    <div *ngIf="countryList.length === 0" >
+      <h2 style="margin-top: 200px;">This country does not exist in this region, please select the correct one</h2>
     </div>
   </div>
 </div>

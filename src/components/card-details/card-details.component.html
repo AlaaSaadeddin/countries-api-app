@@ -31,7 +31,11 @@
       </div>
 
       <p class='bold-text'>Countries Borders</p>
-      <app-card-button class="button-container-div" [countryBorders]="countryList[0].borders"></app-card-button>
+      <app-card-button class="button-container-div" *ngIf="countryList[0].borders.length" [countryBorders]="countryList[0].borders"></app-card-button>
+      <div *ngIf="countryList[0].borders.length === 0">
+        <p style="color: rgb(44, 43, 43); margin-top: 10px;" >There is no borders for this country</p>
+      </div>
+      
     </div>
   </div>
 </div>
