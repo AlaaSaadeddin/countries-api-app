@@ -10,6 +10,7 @@
   --text-color: white;
   --shadow-color:#2b3743;
   background-color: #212e37;
+  --no-data-text-color: #c2e9f9;
 }
 
 .light{
@@ -17,4 +18,5 @@
   --text-color: black;
   --shadow-color: lightgray;
   background-color: #fafafa;
+  --no-data-text-color: #545e65;
 }

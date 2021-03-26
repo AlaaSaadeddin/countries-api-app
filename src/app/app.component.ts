@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,15 +9,11 @@ export class AppComponent {
   title = 'rest-countries';
   darkMode:boolean = false
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 
   changeTheme(){
-    console.log('hassan')
     this.darkMode = !this.darkMode
   }
 }

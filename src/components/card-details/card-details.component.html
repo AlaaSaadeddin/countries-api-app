@@ -6,7 +6,9 @@
     </a>
   </div>
 
-  <div class="details-container">
+  <app-loading *ngIf="isLoading" style="margin-left: 200px;"></app-loading>
+
+  <div class="details-container" *ngIf="countryList.length && !isLoading">
     <div class="img-container">
       <img class="flag-img" src="{{ countryList[0].flag }}" />
     </div>
@@ -32,10 +34,9 @@
 
       <p class='bold-text'>Countries Borders</p>
       <app-card-button class="button-container-div" *ngIf="countryList[0].borders.length" [countryBorders]="countryList[0].borders"></app-card-button>
-      <div *ngIf="countryList[0].borders.length === 0">
+      <div *ngIf="countryList[0].borders.length === 0 && !isLoading">
         <p style="color: rgb(44, 43, 43); margin-top: 10px;" >There is no borders for this country</p>
       </div>
-      
     </div>
   </div>
 </div>

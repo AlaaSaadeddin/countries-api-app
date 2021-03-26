@@ -10,6 +10,7 @@ import {Router} from '@angular/router'
 })
 export class CardDetailsComponent implements OnInit {
   countryList: any;
+  isLoading:boolean = false;
 
   constructor(
     private countryService: CountryService,
@@ -18,6 +19,7 @@ export class CardDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.isLoading=true;
     this.route.paramMap.subscribe((params) => {
       const name = params.get('name');
       if(name){
@@ -25,9 +27,11 @@ export class CardDetailsComponent implements OnInit {
         .getCountry(name)
         .subscribe((countryName) => {
           this.countryList = countryName;
-        });
+        },(error) => (this.isLoading = false),
+        () => (this.isLoading = false));
       }
      
-    });
+    }, (error) => (this.isLoading = false),
+    () => (this.isLoading = false));
   }
 }

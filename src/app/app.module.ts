@@ -14,6 +14,7 @@ import { from } from 'rxjs';
 import {routes} from './routes';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { CardButtonComponent } from '../components/card-button/card-button.component'
+import {LoadingComponent} from '../components/Loading/loading.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardButtonComponent } from '../components/card-button/card-button.compo
     CardListComponent,
     CardDetailsComponent,
     PageNotFoundComponent,
-    CardButtonComponent
+    CardButtonComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
