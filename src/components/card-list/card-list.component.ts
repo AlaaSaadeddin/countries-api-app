@@ -11,6 +11,8 @@ import { Subscription } from 'rxjs';
 })
 export class CardListComponent implements OnInit,OnDestroy {
   countryList:any = []; 
+  isLoading: boolean = true;
+  noDataImg:string="assets/images/no-result.svg"
   requestSubscription:Subscription= new Subscription()
 
 
@@ -25,7 +27,8 @@ export class CardListComponent implements OnInit,OnDestroy {
     this.requestSubscription = this.countryService.getAllCountries()
     .subscribe(country => {
       this.countryList = country;
-    })
+    }, (error) => (this.isLoading = false),
+    () => (this.isLoading = false))
 
   }
 
