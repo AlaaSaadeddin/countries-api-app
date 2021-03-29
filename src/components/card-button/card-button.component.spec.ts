@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 
 import { CardButtonComponent } from './card-button.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CountryService } from '../country.service';
+import { CountryService } from '../services/country.service';
 
 describe('CardButtonComponent', () => {
   let component: CardButtonComponent;

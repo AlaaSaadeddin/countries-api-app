@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { CountryService } from '../country.service';
+import { CountryService } from '../services/country.service';
 import { Country } from '../country';
 
 interface IRegion{
