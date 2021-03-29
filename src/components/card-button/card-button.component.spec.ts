@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { By } from '@angular/platform-browser';
 
 import { CardButtonComponent } from './card-button.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CountryService } from '../country.service';
 
 describe('CardButtonComponent', () => {
   let component: CardButtonComponent;
@@ -8,7 +12,10 @@ describe('CardButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardButtonComponent ]
+      declarations: [ CardButtonComponent ],
+      imports: [RouterTestingModule, HttpClientModule],
+      providers: [HttpClient, CountryService]
+
     })
     .compileComponents();
   });
@@ -22,4 +29,7 @@ describe('CardButtonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
+
+

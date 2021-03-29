@@ -8,7 +8,7 @@
 
   <app-loading *ngIf="isLoading" style="margin-left: 200px;"></app-loading>
 
-  <div class="details-container" *ngIf="countryList.length && !isLoading">
+  <div class="details-container" *ngIf="countryList?.length && !isLoading">
     <div class="img-container">
       <img class="flag-img" src="{{ countryList[0].flag }}" />
     </div>
