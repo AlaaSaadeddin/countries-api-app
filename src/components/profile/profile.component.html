@@ -1,9 +1,11 @@
-<div style="display: flex; flex-direction: column; align-items: center; margin-top: 200px;">
-    <h2>Welcome to your page</h2>
-    <p>Take your time and have fun</p>
+<div style="height: 100vh;  display: flex; flex-direction: column; align-items: center; margin-top: 50px;">
+    <img class="welcome-img" src="/assets/undraw_welcome_cats_thqn.svg" >
+    <h2 style="color: var(--text-color);" >Welcome to your page</h2>
+    <p style="color: var(--text-color); margin-top: 10px;" >Take your time and have fun</p>
     <div style="margin-top: 40px;" >
         <a class="back-to-home-btn" [routerLink]="['../']">
             Home page
         </a>
+        <button class="logout-btn" (click)="logout()" >Log out</button>
       </div>
 </div>

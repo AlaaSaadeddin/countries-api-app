@@ -1,10 +1,26 @@
 .back-to-home-btn {
-    text-decoration: none;
+      text-decoration: none;
       width: 80px;
       padding: 10px;
-      background-color: #57b894;
+      background-color: #6c63ff;
       box-shadow: 1px silver;
       color: white;
       font-weight: bold;
       border-radius: 0.25rem;
+    }
+
+    .logout-btn {
+      cursor: pointer;
+      border: none;
+      width: 100px;
+      height: 38px;
+      background-color: #ee563b;
+      color: white;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      margin-left: 20px;
+    }
+
+    .welcome-img {
+      width: 50%;
     }
