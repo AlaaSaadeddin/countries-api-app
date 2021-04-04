@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "alaa-angular-project"
+  },
+  "targets": {
+    "alaa-angular-project": {
+      "hosting": {
+        "rest-countries": [
+          "alaa-angular-project"
+        ]
+      }
+    }
   }
 }
