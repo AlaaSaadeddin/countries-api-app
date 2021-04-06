@@ -20,7 +20,8 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
 import { CardButtonComponent } from '../components/card-button/card-button.component'
 import {LoadingComponent} from '../components/Loading/loading.component';
 import { LoginComponent } from '../components/login/login.component';
-import { ProfileComponent } from '../components/profile/profile.component'
+import { ProfileComponent } from '../components/profile/profile.component';
+import { SignupComponent } from '../components/signup/signup.component'
 
 
 
@@ -46,7 +47,8 @@ const firebaseConfig = {
     CardButtonComponent,
     LoadingComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

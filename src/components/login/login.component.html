@@ -8,7 +8,7 @@
 
     <p style="margin-top: 30px; color: var(--text-color);" >OR Login with your Email</p>
 
-    <form  #loginForm="ngForm" (ngSubmit)="login()" style="display: flex; width: 100%; align-items: center; flex-direction: column;" >
+    <form  #loginForm="ngForm"  style="display: flex; width: 100%; align-items: center; flex-direction: column;" >
     <input type="text" placeholder="Email Address" class="input-login" [(ngModel)]="email" name="email">
 
     <input type="password" placeholder="Password" class="input-login" [(ngModel)]="password" name="password">

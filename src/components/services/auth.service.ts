@@ -11,7 +11,7 @@ export class AuthService {
   }
 
   checkAuth() {
-    this.Auth.authState.subscribe(user => {
+   return this.Auth.authState.subscribe(user => {
       if(user){
         this.router.navigate(['/profile'])
       } else{

@@ -15,32 +15,24 @@ export class LoginComponent implements OnInit {
   email : string ='';
   password : string = '';
   isAuth : boolean = false;
-  // checkAuth: boolean = false;
 
-  constructor(private Auth: AngularFireAuth , private router: Router , authService: AuthService) {
+  constructor(private Auth: AngularFireAuth , private router: Router , private authService: AuthService) {
    }
 
-   ngOnInit() {
-    this.Auth.authState.subscribe(user => {
-      if(user){
-        this.router.navigate(['/profile'])
-      } else{
-        this.router.navigate(['/login'])
-      }
-    })
-  }
+   ngOnInit() {}
 
    login() {
-     
-    return this.Auth.signInWithEmailAndPassword(this.email,this.password).then(res => {
-      console.log('res :>> ', res);
-      if(res.user){
+    return this.Auth
+    .signInWithEmailAndPassword(this.email,this.password).then(() => {
+      console.log('object11111111111 :>> ',);
+        this.authService.checkAuth();
+        console.log('object2222222 :>> ',);
         this.isAuth = !this.isAuth
-      }
-      // console.log(this.email,this.password);
-      
+        console.log('isAuth Login :>> ', this.isAuth);      
     })
    }
+
+}
 
 
   //  loginFb() {
@@ -59,5 +51,3 @@ export class LoginComponent implements OnInit {
   //       console.log(error)
   //   })
   // }
-
-}

@@ -10,18 +10,18 @@ import {Router} from '@angular/router'
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private Auth: AngularFireAuth , private router: Router , authService: AuthService) {
+  constructor(private Auth: AngularFireAuth , private router: Router ,private authService: AuthService) {
   }
 
   ngOnInit(): void {
   }
 
-
   logout() {
     return this.Auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['/'])
-
+      this.authService.checkAuth();
+      // this.isAuth = !this.isAuth;
+      // console.log('isAuth LogOUT :>> ', this.isAuth);
     })
   }
 

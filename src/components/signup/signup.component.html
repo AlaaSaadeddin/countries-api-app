@@ -1,0 +1,25 @@
+<div class="signup-form-container">
+    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;" >
+    <h2 style="color: var(--text-color); margin-bottom: 30px;" >Join Us and Sign up</h2>
+
+    <form  #loginForm="ngForm" (ngSubmit)="signUp()" style="display: flex; width: 100%; align-items: center; flex-direction: column;" >
+    <input type="text" placeholder="Email Address" class="input-signup" [(ngModel)]="email" name="email">
+
+    <input type="password" placeholder="Password" class="input-signup" [(ngModel)]="password" name="password">
+
+    <button type="submit" class="signup-btn" (click)="signUp()" >Sign up</button>
+
+    </form>
+
+    <p style="margin-top: 30px; color: var(--text-color);" >OR sign up with</p>
+    
+    <button class="signup-btn" >sign up with Google</button>
+    <button class="signup-btn">sign up with Facebook</button>
+    <button class="signup-btn">sign up with Github</button>
+
+    <p style="margin-top: 30px; color: var(--text-color);">already have account? <span routerLink="/login" style="font-weight: bold; color: var(--text-color);  cursor: pointer;" >Login</span></p>
+
+
+    </div>
+
+</div>
