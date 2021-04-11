@@ -2,8 +2,8 @@
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center;" >
     <h2 style="color: var(--text-color); margin-bottom: 30px;" >Welcome Back</h2>
 
-    <button class="login-btn" >Login with Google</button>
-    <button class="login-btn">Login with Facebook</button>
+    <button class="login-btn" (click)="LoginGoogle()" >Login with Google</button>
+    <button class="login-btn" (click)="loginFb()" >Login with Facebook</button>
     <button class="login-btn">Login with Github</button>
 
     <p style="margin-top: 30px; color: var(--text-color);" >OR Login with your Email</p>

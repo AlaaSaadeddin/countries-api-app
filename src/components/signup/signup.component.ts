@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthService} from '../services/auth.service'
 import {Router} from '@angular/router'
+import firebase from 'firebase';
+
 
 @Component({
   selector: 'app-signup',
@@ -26,4 +28,11 @@ export class SignupComponent implements OnInit {
     })
   }
 
+  signupGoogle(){
+      return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((res)=> {
+      console.log('res :>> ', res);
+      this.authService.checkAuth();
+    })
+
+}
 }

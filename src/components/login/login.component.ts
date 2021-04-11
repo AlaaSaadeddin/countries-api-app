@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Provider } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
-// import { AngularFireModule } from '@angular/fire';
-// import { auth } from 'firebase/app';
+import { AngularFireModule } from '@angular/fire';
+import firebase from 'firebase';
 import {AuthService} from '../services/auth.service'
 import {Router} from '@angular/router'
+
 
 @Component({
   selector: 'app-login',
@@ -32,22 +33,21 @@ export class LoginComponent implements OnInit {
     })
    }
 
-}
-
+   LoginGoogle(){
+      return firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(()=> {
+      this.authService.checkAuth();
+    })
+   }
 
   //  loginFb() {
-  //    return this.Auth
-  //  }
-
-  //  loginGoogle() {
-  //   return this.AuthLogin(new auth.GoogleAuthProvider());
+  //   return firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider()).then((res)=> {
+  //      console.log('res :>> ', res);
+  //      var user = res.user;
+  //     this.authService.checkAuth()
+      
+  //   }).catch(err => console.log('err :>> ', err))
+    
   // }
 
-  // AuthLogin(provider) {
-  //   return this.Auth.auth.signInWithPopup(provider)
-  //   .then((result) => {
-  //       console.log('You have been successfully logged in!')
-  //   }).catch((error) => {
-  //       console.log(error)
-  //   })
-  // }
+}
+
