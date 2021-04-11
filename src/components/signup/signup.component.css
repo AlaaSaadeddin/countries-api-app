@@ -1,0 +1,29 @@
+.signup-form-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    min-height: 100vh;
+    border: 3px solid var(--shadow-color);
+  }
+  
+  .signup-btn {
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    border: 3px solid var(--shadow-color);
+  }
+  
+  .input-signup {
+    width: 30%;
+    padding: 10px;
+    margin-top: 10px;
+    border: solid var(--header-background-color) 1px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px var(--shadow-color);
+    color: var(--text-color);
+    background-color: var(--header-background-color);
+  }
+  
