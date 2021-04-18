@@ -1,7 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import {CountryService} from '../services/country.service'
 import {ActivatedRoute} from '@angular/router'
-import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-card-details',
@@ -15,7 +14,6 @@ export class CardDetailsComponent implements OnInit {
   constructor(
     private countryService: CountryService,
     private route: ActivatedRoute,
-    private router: Router
   ) {}
 
   ngOnInit() {

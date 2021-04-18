@@ -2,8 +2,6 @@ import { Component, OnInit, Provider } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import firebase from 'firebase';
 import {AuthService} from '../services/auth.service'
-import {Router} from '@angular/router'
-
 
 @Component({
   selector: 'app-login',
@@ -15,7 +13,7 @@ export class LoginComponent implements OnInit {
   email : string ='';
   password : string = '';
 
-  constructor(private Auth: AngularFireAuth , private router: Router , private authService: AuthService) {
+  constructor(private Auth: AngularFireAuth , private authService: AuthService) {
    }
 
    ngOnInit() {}

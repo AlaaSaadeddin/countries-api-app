@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import {
     HttpClientTestingModule,
-    HttpTestingController,
   } from '@angular/common/http/testing';
 import {CountryService} from './country.service'
 import {Country} from '../country'
@@ -10,7 +9,6 @@ import {of} from 'rxjs'
   describe('CountryService', ()=> {
 
     let countryService: CountryService;
-    // httpTestingController: HttpTestingController
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -19,8 +17,6 @@ import {of} from 'rxjs'
         });
         countryService = TestBed.get(CountryService);
       });
-
-      // httpTestingController = TestBed.get(HttpTestingController);
 
     let COUNTRY : Country[] = [
       {name: 'Palestine', 

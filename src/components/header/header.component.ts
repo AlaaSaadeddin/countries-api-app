@@ -21,14 +21,4 @@ export class HeaderComponent implements OnInit {
     this.enableDarkMode.emit()
   }
 
-  // logout() {
-  //   return this.Auth.signOut().then(() => {
-  //     localStorage.removeItem('user');
-  //     this.authService.checkAuth();
-  //     this.isAuth = !this.isAuth;
-  //     console.log('isAuth LogOUT :>> ', this.isAuth);
-  //   })
-  // }
-
-
 }
