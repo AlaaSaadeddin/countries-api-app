@@ -28,11 +28,6 @@ describe('CardListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should render a message in h3 tag', () => {
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h3').textContent).toBe('This country does not exist in this region, please select the correct one and try again')
-  // });
-
   it('should the first div have class (home-container) ', () => {
     const list: HTMLElement = fixture.nativeElement.querySelector('div');
     const className = list.classList;

@@ -8,7 +8,6 @@
 .form {
     width: 70%;
     margin-top: 40px;
-
 }
 
 .search-input {
@@ -36,13 +35,6 @@
     box-shadow: 1px 1px 1px 1px var(--shadow-color);
 }
 
-/* @media (max-width: 1200px) {
-    .category {
-        width: 22%;
-    }
-
-} */
-
 @media (max-width: 1200px) and (min-width:700) {
 
     .form {
@@ -57,9 +49,7 @@
     .category {
         width: 50%;
         margin-left: 30px;
-
     }
-
 }
 
 @media (max-width: 600px) {
@@ -79,9 +69,7 @@
     .category {
         width: 50%;
         margin-left: 30px;
-
     }
-
 }
 
 @media (max-width:400px) {
@@ -97,7 +85,6 @@
     .category {
         margin-left: 30px;
         width: 50%;
-
     }
 
 }
