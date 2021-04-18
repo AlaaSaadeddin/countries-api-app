@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthService} from '../services/auth.service'
-import {Router} from '@angular/router'
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 
 @Component({
@@ -14,9 +13,8 @@ export class SignupComponent implements OnInit {
 
   email : string ='';
   password : string = '';
-  isAuth : boolean = false;
 
-  constructor(private Auth: AngularFireAuth , private router: Router , private authService: AuthService) {
+  constructor(private Auth: AngularFireAuth , private authService: AuthService) {
    }
 
   ngOnInit() {
