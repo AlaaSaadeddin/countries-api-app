@@ -33,13 +33,6 @@ export class SignupComponent implements OnInit {
       console.log('res :>> ', res);
       this.authService.checkAuth();
     })
-}
 
-signUpFb() {
-  return firebase.auth()
-  .signInWithPopup(new firebase.auth.FacebookAuthProvider()).then((res)=> {
-  this.authService.checkAuth()
-  }).catch(err => console.log('err :>> ', err))
-  
 }
 }

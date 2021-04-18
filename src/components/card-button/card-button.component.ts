@@ -1,5 +1,7 @@
 import { Component, OnInit , Input,OnDestroy } from '@angular/core';
 import {CountryService} from '../services/country.service'
+import {ActivatedRoute} from '@angular/router'
+import {Router} from '@angular/router'
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -10,7 +12,7 @@ import { Subscription } from 'rxjs';
 export class CardButtonComponent implements OnInit,OnDestroy {
   requestSubscription:Subscription= new Subscription()
 
-  constructor(private countryService: CountryService) { 
+  constructor(private countryService: CountryService,private route: ActivatedRoute , private router: Router) { 
   }
   ngOnInit(): void {
     this.requestSubscription = this.countryService

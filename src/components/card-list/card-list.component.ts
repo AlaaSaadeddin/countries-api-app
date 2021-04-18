@@ -1,5 +1,7 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
 import {CountryService} from '../services/country.service'
+import {ActivatedRoute} from '@angular/router'
+import {Router} from '@angular/router'
 import { Country } from '../country';
 import { Subscription } from 'rxjs';
 @Component({
@@ -14,7 +16,8 @@ export class CardListComponent implements OnInit,OnDestroy {
   requestSubscription:Subscription= new Subscription()
 
 
-  constructor(private countryService: CountryService) { }
+  constructor(private countryService: CountryService,
+    private route: ActivatedRoute , private router: Router) { }
   ngOnDestroy(): void {
     console.log('List Destroyed')
    this.requestSubscription.unsubscribe()

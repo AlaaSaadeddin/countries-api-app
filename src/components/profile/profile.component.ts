@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthService} from '../services/auth.service'
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import {AuthService} from '../services/auth.service'
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private Auth: AngularFireAuth ,private authService: AuthService) {
+  constructor(private Auth: AngularFireAuth , private router: Router ,private authService: AuthService) {
   }
 
   ngOnInit(): void {
@@ -19,6 +20,8 @@ export class ProfileComponent implements OnInit {
     return this.Auth.signOut().then(() => {
       localStorage.removeItem('user');
       this.authService.checkAuth();
+      // this.isAuth = !this.isAuth;
+      // console.log('isAuth LogOUT :>> ', this.isAuth);
     })
   }
 
